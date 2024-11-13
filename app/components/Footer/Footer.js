@@ -94,14 +94,10 @@ export default function Footer() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/integration-services">
-                      خدمات التكامل
-                    </Link>
+                    <Link href="/integration-services">خدمات التكامل</Link>
                   </li>
                   <li>
-                    <Link href="/resource-augmentation">
-                      تعزيز الموارد
-                    </Link>
+                    <Link href="/resource-augmentation">تعزيز الموارد</Link>
                   </li>
                   <li>
                     <Link href="/currency-exchange-platform-development">
@@ -143,10 +139,10 @@ export default function Footer() {
               <div className={styles.linksBox}>
                 <h4>اتصل بنا</h4>
                 <ul>
-                  <p>971-54-5061985+</p>
-                  <p>talktous@fintechify.ae</p>
+                  <p>968-9749-7428+</p>
+                  <p>contact@fintechify.com.om</p>
                   <p>
-                    الوحدة: IH0101-OF01، الطابق الأول، <br /> Innovation One، مركز دبي المالي العالمي، <br /> دبي، الإمارات العربية المتحدة
+                  ص.ب: 121، الرمز البريدي: 111،<br/> شمال الغبرة / بوشر / سلطنة عمان
                   </p>
                 </ul>
               </div>
@@ -154,7 +150,7 @@ export default function Footer() {
           </div>
           <div className="row" id={styles.BottomRow}>
             <p className="text-center">
-               جميع الحقوق محفوظة &copy; 2024 FinTechify
+              جميع الحقوق محفوظة &copy; 2024 FinTechify
             </p>
           </div>
         </section>

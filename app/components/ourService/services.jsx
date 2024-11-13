@@ -36,14 +36,15 @@ const services = () => {
               <div className={style.LuSend}>
                 <span>
                   <p>الاستفسارات العامة</p>
-                  <h6>talktous@fintechify.ae</h6>
+                  <h6>contact@fintechify.com.om
+</h6>
                 </span>
                 <LuSend className={style.sendIcon} />
               </div>
               <div className={style.LuSend}>
                 <span>
                   <p>استفسارات مبيعات العملاء</p>
-                  <h6>971-54-5061985+</h6>
+                  <h6>968-9749-7428+</h6>
                 </span>
                 <PiHeadphonesLight className={style.sendIcon} />
               </div>

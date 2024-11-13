@@ -68,11 +68,15 @@ const Banner = () => {
                 <Image src={Phone} alt="Phone" className={style.phoner} />
                 <p data-aos="fade-up" data-aos-duration="1000">
                   مرحبًا بكم في Fintechify، بوابتكم إلى الحلول المالية المتقدمة
-                  في قلب الإمارات العربية المتحدة. نحن نعيد تشكيل الطريقة التي
-                  تتعاملون بها مع البنك، حيث نقدم مزيجًا سلسًا من التكنولوجيا
-                  والحلول المالية لتلبية الاحتياجات الفريدة لعملائنا.
+                  في قلب سلطنة عُمان. نحن نحدث ثورة في طريقة تعاملكم مع البنك،
+                  حيث نقدم مزيجًا سلسًا من التكنولوجيا والحلول المالية لتلبية
+                  الاحتياجات الفريدة لعملائنا.
                 </p>
-                <button data-aos="fade-up" className="text-center" data-aos-duration="1500">
+                <button
+                  data-aos="fade-up"
+                  className="text-center"
+                  data-aos-duration="1500"
+                >
                   اعرف المزيد
                   <span>
                     <MdArrowOutward />
@@ -96,16 +100,13 @@ const Banner = () => {
             <Image src={Phone1} alt="Phone1" className={style.phoner1} />
             {/* <Image src={Phone1} alt="Phone1" className={style.phoner1} /> */}
             {/* <Image src={Phone1} alt="Phone1" className={style.phoner1} /> */}
-
           </div>
         )}
 
         {isTwo && (
           <div className={`row ${style.slider1}`}>
             <div className={style.rowContent}>
-              <div
-                className={`col-lg-6 col-md-6 m-0 p-0 ${style.colleft2}`}
-              >
+              <div className={`col-lg-6 col-md-6 m-0 p-0 ${style.colleft2}`}>
                 <h1
                   className={style.BannerText}
                   data-aos="fade-up"
@@ -140,17 +141,19 @@ const Banner = () => {
                   </div> */}
                 </div>
               </div>
-              <div
-                className={`col-lg-4 col-md-4 m-0 p-0 ${style.colright2}`}
-              >
+              <div className={`col-lg-4 col-md-4 m-0 p-0 ${style.colright2}`}>
                 <Image src={Phone} alt="Phone" className={style.phoner} />
                 <p data-aos="fade-up" data-aos-duration="1500">
                   مرحبًا بكم في Fintechify، بوابتكم إلى الحلول المالية المتقدمة
-                  في قلب الإمارات العربية المتحدة. نحن نعيد تشكيل الطريقة التي
-                  تتعاملون بها مع البنك، حيث نقدم مزيجًا سلسًا من التكنولوجيا
-                  والحلول المالية لتلبية الاحتياجات الفريدة لعملائنا.
+                  في قلب سلطنة عُمان. نحن نحدث ثورة في طريقة تعاملكم مع البنك،
+                  حيث نقدم مزيجًا سلسًا من التكنولوجيا والحلول المالية لتلبية
+                  الاحتياجات الفريدة لعملائنا.
                 </p>
-                <button data-aos="fade-up" className="text-center" data-aos-duration="1500">
+                <button
+                  data-aos="fade-up"
+                  className="text-center"
+                  data-aos-duration="1500"
+                >
                   اعرف المزيد
                   <span>
                     <MdArrowOutward />
