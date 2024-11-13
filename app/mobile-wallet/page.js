@@ -8,7 +8,7 @@ import Footer from "../components/Footer/Footer";
 import styles from "../components/assets/css/services.module.css";
 import img1 from "../components/assets/images/phone-that-has-word-go-go-it-scaled.jpg";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
-import aboutFirstSectionImg from "../components/assets/images/phone-screen-with-dollar-sign-it-scaled.JPG";
+import aboutFirstSectionImg from "../components/assets/images/phone-screen-with-dollar-sign-it-scaled.png";
 import QoutesImg from "../components/assets/images/img-3-300x300.png";
 import { IoCheckmarkSharp } from "react-icons/io5";
 import { FaArrowRight } from "react-icons/fa6";

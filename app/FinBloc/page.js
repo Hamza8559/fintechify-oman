@@ -15,7 +15,7 @@ import { FaArrowRight } from "react-icons/fa6";
 import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 import styles from "../components/assets/css/services.module.css";
 import img1 from "../components/assets/images/fin1.jpg";
-import img from "../components/assets/images/fin2.jpg";
+import img from "../components/assets/images/fin2.png";
 
 
 

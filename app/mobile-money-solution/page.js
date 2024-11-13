@@ -6,9 +6,9 @@ import Banner from "../components/Banner/Banner";
 import Testimonials from "../components/Testimonials/Testimonials";
 import Footer from "../components/Footer/Footer";
 import styles from "../components/assets/css/services.module.css";
-import img1 from "../components/assets/images/multi-exposure-mans-hand-holding-using-digital-device-data-theme-drawing-innovation-concept-scaled.jpg";
+import img1 from "../components/assets/images/multi-exposure-mans-hand-holding-using-digital-device-data-theme-drawing-innovation-concept-scaled.png";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
-import aboutFirstSectionImg from "../components/assets/images/generating-business-from-smartphone-scaled.jpg";
+import aboutFirstSectionImg from "../components/assets/images/generating-business-from-smartphone-scaled.png";
 import QoutesImg from "../components/assets/images/img-3-300x300.png";
 import { IoCheckmarkSharp } from "react-icons/io5";
 import { FaArrowRight } from "react-icons/fa6";
@@ -37,7 +37,9 @@ function page() {
               <div className={styles.InnovativeBox}>
                 <h4>حلول الأموال عبر الهاتف المحمول</h4>
                 <p>
-                  مع كونكسوس – حل الأموال عبر الهاتف المحمول لدينا؛ نحن نمكّن مقدمي الخدمات من توفير مجموعة كاملة من المنتجات لتقديم خدمات مالية شاملة للأشخاص الذين لا يتعاملون مع البنوك.
+                  مع كونكسوس – حل الأموال عبر الهاتف المحمول لدينا؛ نحن نمكّن
+                  مقدمي الخدمات من توفير مجموعة كاملة من المنتجات لتقديم خدمات
+                  مالية شاملة للأشخاص الذين لا يتعاملون مع البنوك.
                 </p>
                 <h5 className="mt-5">كونكسوس في جوهره</h5>
                 <ul className={styles.ulPoints}>
@@ -59,7 +61,8 @@ function page() {
                   </li>
                   <li>
                     <MdOutlineKeyboardDoubleArrowRight />
-                    التكامل مع وسائط مالية تسمح بالتكامل مع الكيانات المالية والتطبيقات الخارجية لتجميع الخدمات
+                    التكامل مع وسائط مالية تسمح بالتكامل مع الكيانات المالية
+                    والتطبيقات الخارجية لتجميع الخدمات
                   </li>
                   <li>
                     <MdOutlineKeyboardDoubleArrowRight />
@@ -67,7 +70,8 @@ function page() {
                   </li>
                   <li>
                     <MdOutlineKeyboardDoubleArrowRight />
-                    قناة المعاملات (USSD، الويب المحمول، التطبيقات الأصلية، الويب وAPIs)
+                    قناة المعاملات (USSD، الويب المحمول، التطبيقات الأصلية،
+                    الويب وAPIs)
                   </li>
                   <li>
                     <MdOutlineKeyboardDoubleArrowRight />
@@ -120,7 +124,9 @@ function page() {
               <div className={styles.InnovativeBox}>
                 <h4>حلول الأموال عبر الهاتف المحمول</h4>
                 <p>
-                  مع كونكسوس – حل الأموال عبر الهاتف المحمول لدينا؛ نحن نمكّن مقدمي الخدمات من توفير مجموعة كاملة من المنتجات لتقديم خدمات مالية شاملة للأشخاص الذين لا يتعاملون مع البنوك.
+                  مع كونكسوس – حل الأموال عبر الهاتف المحمول لدينا؛ نحن نمكّن
+                  مقدمي الخدمات من توفير مجموعة كاملة من المنتجات لتقديم خدمات
+                  مالية شاملة للأشخاص الذين لا يتعاملون مع البنوك.
                 </p>
                 <h5 className="mt-5">كونكسوس في جوهره</h5>
                 <ul className={styles.ulPoints}>
@@ -142,7 +148,8 @@ function page() {
                   </li>
                   <li>
                     <MdOutlineKeyboardDoubleArrowRight />
-                    التكامل مع وسائط مالية تسمح بالتكامل مع الكيانات المالية والتطبيقات الخارجية لتجميع الخدمات
+                    التكامل مع وسائط مالية تسمح بالتكامل مع الكيانات المالية
+                    والتطبيقات الخارجية لتجميع الخدمات
                   </li>
                   <li>
                     <MdOutlineKeyboardDoubleArrowRight />
@@ -150,7 +157,8 @@ function page() {
                   </li>
                   <li>
                     <MdOutlineKeyboardDoubleArrowRight />
-                    قناة المعاملات (USSD، الويب المحمول، التطبيقات الأصلية، الويب وAPIs)
+                    قناة المعاملات (USSD، الويب المحمول، التطبيقات الأصلية،
+                    الويب وAPIs)
                   </li>
                   <li>
                     <MdOutlineKeyboardDoubleArrowRight />
