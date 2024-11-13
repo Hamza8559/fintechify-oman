@@ -15,7 +15,7 @@ const Banner = () => {
   const [isTwo, setIsTwo] = useState(false);
 
   useEffect(() => {
-    const timer = setInterval(() => {
+    const timer = setInterval(() => {git
       setIsOne((prev) => !prev);
       setIsTwo((prev) => !prev);
     }, 5000);

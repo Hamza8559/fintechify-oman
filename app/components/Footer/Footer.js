@@ -140,7 +140,7 @@ export default function Footer() {
                 <h4>اتصل بنا</h4>
                 <ul>
                   <p>968-9749-7428+</p>
-                  <p>contact@fintechify.com.om</p>
+                  <p>info@fintechify.com.om</p>
                   <p>
                   ص.ب: 121، الرمز البريدي: 111،<br/> شمال الغبرة / بوشر / سلطنة عمان
                   </p>
