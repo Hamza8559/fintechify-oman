@@ -1,0 +1,128 @@
+.modalBox{
+    background-color: #00000061;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 9999999;
+    top: 0;
+    left: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modalBox .modalBody{
+    width: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(90deg, #0929c2, #2095fb);
+    border-radius: 10px;
+}
+.modalBox .modalBody .modalContent{
+    width: 100%;
+}
+.modalBox .modalBody .modalContent .modalFormBox{
+    margin: 25px 10px;
+    border-radius: 10px;
+    padding: 15px 12px;
+}
+.modalFormBox svg{
+    margin-right: 20px;
+    position: absolute;
+    top: 14px;
+    right: 0;
+    font-size: 0;
+    background: white;
+    color: black;
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    padding: 6px;
+    cursor: pointer;
+}
+.modalBox .modalBody .modalContent .modalFormBox form{}
+.formInputBox{
+    display: flex;
+    flex-direction: column;
+    margin: 25px 15px;
+    width: 100%;
+}
+.modalBox .modalBody .modalContent .modalFormBox form label{
+    columns: white;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+.modalBox .modalBody .modalContent .modalFormBox form input{
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: none;
+    color: black;
+    padding: 0 11px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.modalBox .modalBody .modalContent .modalFormBox form select{
+    border-radius: 10px;
+    margin-top: 10px;
+    color: black;
+}
+.formInputBox textarea{
+    width: 95%;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+}
+.modalBox .modalBody .modalContent .modalFormBox form button{
+    border: none;
+    outline: none;
+    margin: 0 15px;
+    padding: 10px 40px;
+    border-radius: 25px;
+    font-weight: 600;
+    color: white;
+    background-image: linear-gradient(90deg, #2095fb, #0929c2);
+    box-shadow: -3px 0px 10px #8080809e;
+}
+
+.modalBox .modalBody .modalContent .modalFormBox form button:hover{
+    background-image: linear-gradient(90deg, #0929c2, #2095fb);
+}
+
+@media screen and (max-width:992px){
+    .modalBox .modalBody{
+        width: 70%;
+    }
+}
+@media screen and (max-width:567px){
+    .modalBox .modalBody{
+        width: 90%;
+    }
+}
+@media screen and (max-width:480px){
+    .modalBox .modalBody{
+        width: 95%;
+    }
+    .formInputBox{
+        margin: 5px 0px;
+    }
+    .flex{
+        display: block;
+    }
+    .modalBox .modalBody .modalContent .modalFormBox form input{
+        margin-top: 0px;
+    }
+    .modalBox .modalBody .modalContent .modalFormBox form select{
+        margin-top: 0px;
+    }
+    .modalBox .modalBody .modalContent .modalFormBox form button{
+        margin: 0 0;
+    }
+    .formInputBox textarea{
+        width: 100%;
+    }
+}

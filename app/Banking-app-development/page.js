@@ -1,4 +1,6 @@
-import React from 'react'
+
+"use client"
+import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import Header from '../components/Header/Header'
@@ -12,9 +14,11 @@ import aboutFirstSectionImg from "../components/assets/images/3d-internet-secuir
 import QoutesImg from '../components/assets/images/img-3-300x300.png'
 import { IoCheckmarkSharp } from "react-icons/io5";
 import { FaArrowRight } from "react-icons/fa6";
+import ContactModal from '../components/modals/ContactModal'
 
 
 function page() {
+    const [contactModal, setContactModal] = useState(false)
     return (
         <>
             <Header />
@@ -42,12 +46,12 @@ function page() {
                                     فريقنا من المصممين والمطورين والاستراتيجيين يقوم ببناء ميزات تعزز المستخدمين وتعزز النمو.
                                 </p>
                             </div>
-                            <button className={styles.LuSend2}>
-                                <Link href="/contact-us" passHref>
+                            <button className={styles.LuSend2} onClick={() => {setContactModal(true)}}>
+                                {/* <Link href="#" > */}
                                     <span style={{ textDecoration: "none", color: "white" }}>
                                         انضم الآن <FaArrowRight />
                                     </span>
-                                </Link>
+                                {/* </Link> */}
                             </button>
                         </div>
                         <div className="col-lg-6">
@@ -391,6 +395,8 @@ function page() {
 
             <Testimonials />
             <Footer />
+            
+            {contactModal ? <ContactModal  crossClick={setContactModal}/> : false}
         </>
     )
 }
