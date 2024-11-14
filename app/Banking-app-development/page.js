@@ -78,7 +78,7 @@ function page() {
           </div>
         </div>
       </section>
-{/*------------------------------------------ for Mobile--------------- */}
+      {/*------------------------------------------ for Mobile--------------- */}
       <section className="mb-5 mt-5 d-lg-none d-block">
         <div className="container-fluid px-lg-5" style={{ direction: "rtl" }}>
           <div className="row align-items-center">

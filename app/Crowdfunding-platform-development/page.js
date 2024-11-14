@@ -1,4 +1,5 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import Header from '../components/Header/Header'
@@ -12,9 +13,11 @@ import aboutFirstSectionImg from "../components/assets/images/crowdimg.jpg"
 import QoutesImg from '../components/assets/images/img-3-300x300.png'
 import { IoCheckmarkSharp } from "react-icons/io5";
 import { FaArrowRight } from "react-icons/fa6";
+import ContactModal from '../components/modals/ContactModal'
 
 
 function page() {
+    const [contactModal, setContactModal] = useState(false)
     return (
         <>
             <Header />
@@ -40,12 +43,12 @@ function page() {
                                 <p>مصممة للنجاح: منصاتنا قابلة للتوسع والتكيف، مما يمكّن منصة عميلك من النمو <br /> جنبًا إلى جنب مع طموحاتهم.</p>
                                 <p>أكثر من مجرد تطوير: نحن نقدم الدعم والصيانة المستمرة لضمان أن تظل منصة عميلك <br /> آمنة وفعالة وعلى طليعة مشهد التمويل الجماعي.</p>
                             </div>
-                            <button className={styles.LuSend2}>
-                                <Link href="/contact-us" passHref>
-                                    <span style={{ textDecoration: "none", color: "white" }}>
-                                        انضم الآن <FaArrowRight />
-                                    </span>
-                                </Link>
+                            <button className={styles.LuSend2} onClick={() => { setContactModal(true) }}>
+                                {/* <Link href="#" > */}
+                                <span style={{ textDecoration: "none", color: "white" }}>
+                                    الحصول على الخدمات <FaArrowRight />
+                                </span>
+                                {/* </Link> */}
                             </button>
                         </div>
                         <div className="col-lg-6">
@@ -75,17 +78,18 @@ function page() {
                                 <p>مصممة للنجاح: منصاتنا قابلة للتوسع والتكيف، مما يمكّن منصة عميلك من النمو <br /> جنبًا إلى جنب مع طموحاتهم.</p>
                                 <p>أكثر من مجرد تطوير: نحن نقدم الدعم والصيانة المستمرة لضمان أن تظل منصة عميلك <br /> آمنة وفعالة وعلى طليعة مشهد التمويل الجماعي.</p>
                             </div>
-                            <button className={styles.LuSend2}>
-                                <Link href="/contact-us" passHref>
-                                    <span style={{ textDecoration: "none", color: "white" }}>
-                                        انضم الآن <FaArrowRight />
-                                    </span>
-                                </Link>
+                            <button className={styles.LuSend2} onClick={() => { setContactModal(true) }}>
+                                {/* <Link href="#" > */}
+                                <span style={{ textDecoration: "none", color: "white" }}>
+                                    الحصول على الخدمات <FaArrowRight />
+                                </span>
+                                {/* </Link> */}
                             </button>
                         </div>
                     </div>
                 </div>
             </section>
+            {contactModal ? <ContactModal crossClick={setContactModal} /> : false}
 
             <section className={styles.processSection} data-aos="fade-up" data-aos-duration="500">
                 <div className="container-fluid px-lg-5">

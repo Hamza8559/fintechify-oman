@@ -1,4 +1,5 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
 import Image from 'next/image'
 import Header from '../components/Header/Header'
 import Banner from '../components/Banner/Banner'
@@ -10,8 +11,10 @@ import { IoCheckmarkSharp } from "react-icons/io5";
 import img1 from '../components/assets/images/LwFhMaSbaBL4xwnIjhjtOh4AJVI2FE1fuQivfjbk.jpg'
 import Link from 'next/link'
 import { FaArrowRight } from "react-icons/fa6";
+import ContactModal from '../components/modals/ContactModal'
 
 const page = () => {
+  const [contactModal, setContactModal] = useState(false)
   return (
     <>
       <Header />
@@ -37,12 +40,12 @@ const page = () => {
                 <p>ما بعد النقد: الأمر لم يعد يتعلق بالمدفوعات فقط. تخيل تخزين بطاقات الولاء، التذاكر، وحتى إدارة الاستثمارات - كل ذلك في تطبيق آمن واحد. مستقبل التمويل هنا!</p>
                 <p>جاهز للانضمام إلى الثورة؟ طوّر التطبيق الرقمي التالي الذي سيغير قواعد اللعبة!</p>
               </div>
-              <button className={styles.LuSend2}>
-                <Link href="/contact-us" passHref>
-                  <span style={{ textDecoration: "none", color: "white" }}>
-                    انضم الآن <FaArrowRight />
-                  </span>
-                </Link>
+              <button className={styles.LuSend2} onClick={() => { setContactModal(true) }}>
+                {/* <Link href="#" > */}
+                <span style={{ textDecoration: "none", color: "white" }}>
+                  الحصول على الخدمات <FaArrowRight />
+                </span>
+                {/* </Link> */}
               </button>
             </div>
             <div className="col-lg-6">
@@ -74,17 +77,18 @@ const page = () => {
                 <p>ما بعد النقد: الأمر لم يعد يتعلق بالمدفوعات فقط. تخيل تخزين بطاقات الولاء، التذاكر، وحتى إدارة الاستثمارات - كل ذلك في تطبيق آمن واحد. مستقبل التمويل هنا!</p>
                 <p>جاهز للانضمام إلى الثورة؟ طوّر التطبيق الرقمي التالي الذي سيغير قواعد اللعبة!</p>
               </div>
-              <button className={styles.LuSend2}>
-                <Link href="/contact-us" passHref>
-                  <span style={{ textDecoration: "none", color: "white" }}>
-                    انضم الآن <FaArrowRight />
-                  </span>
-                </Link>
+              <button className={styles.LuSend2} onClick={() => { setContactModal(true) }}>
+                {/* <Link href="#" > */}
+                <span style={{ textDecoration: "none", color: "white" }}>
+                  الحصول على الخدمات <FaArrowRight />
+                </span>
+                {/* </Link> */}
               </button>
             </div>
           </div>
         </div>
       </section>
+      {contactModal ? <ContactModal crossClick={setContactModal} /> : false}
      
       <section className={styles.processSection} data-aos="fade-up" data-aos-duration="500">
         <div className="container-fluid px-lg-5">
