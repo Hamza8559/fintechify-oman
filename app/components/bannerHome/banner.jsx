@@ -9,6 +9,7 @@ import head1 from "../assets/images/head1.png";
 import head2 from "../assets/images/head2.png";
 import head3 from "../assets/images/head3.png";
 import head4 from "../assets/images/head4.svg";
+import Link from "next/link";
 
 const Banner = () => {
   const [isOne, setIsOne] = useState(true);
@@ -77,11 +78,13 @@ const Banner = () => {
                   className="text-center"
                   data-aos-duration="1500"
                 >
-                  اعرف المزيد
-                  <span>
-                    <MdArrowOutward />
+                  <Link href="/service" passHref>
+                  <span style={{ textDecoration: "none", color: "white" }}>
+                  اعرف المزيد<MdArrowOutward />
                   </span>
+                </Link>
                 </button>
+                
               </div>
             </div>
             <div className={`row m-0 ${style.btmRow3}`}>
@@ -154,10 +157,11 @@ const Banner = () => {
                   className="text-center"
                   data-aos-duration="1500"
                 >
-                  اعرف المزيد
-                  <span>
-                    <MdArrowOutward />
+                  <Link href="/service" passHref>
+                  <span style={{ textDecoration: "none", color: "white" }}>
+                  اعرف المزيد<MdArrowOutward />
                   </span>
+                </Link>
                 </button>
               </div>
             </div>

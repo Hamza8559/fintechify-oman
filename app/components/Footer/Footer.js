@@ -13,7 +13,7 @@ export default function Footer() {
   const formRef = useRef(null);
   const postData = async (e) => {
     e.preventDefault();
-    message.success("You have subscribed news letter");
+    message.success("لقد اشتركت في النشرة الإخبارية");
     formRef.current.reset();
 };
   return (

@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useEffect, useRef, useState } from "react";
 import Header from "../components/Header/Header";
 import Testimonials from "../components/Testimonials/Testimonials";
 import Footer from "../components/Footer/Footer";
@@ -12,8 +13,61 @@ import { IoLocation } from "react-icons/io5";
 import { MdOutlineEmail } from "react-icons/md";
 import { GrLocation } from "react-icons/gr";
 import { IoLocationOutline } from "react-icons/io5";
+import { message } from "antd";
 
 function page() {
+  const [name, setName] = useState(null);
+  const [email, setEmail] = useState(null);
+  const [contact, setContact] = useState(null);
+  const [service, setService] = useState("تطوير تطبيقات البنوك");
+  const [msg, setMsg] = useState(null);
+  const formRef = useRef(null);
+  const [loading, setLaoding] = useState(false);
+
+  message.config({
+    zIndex: 999999,
+    top: 20,
+    duration: 3,
+    className: "centered_message",
+  });
+
+  const postData = async (e) => {
+    e.preventDefault();
+    setLaoding(true);
+    try {
+      const response = await fetch("https://hrm-api.logomish.com/subscribe", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          service: service,
+          contact_number: contact,
+          comment: msg,
+        }),
+      });
+      if (!response.ok) {
+        message.success(response?.message);
+        setLaoding(false);
+      } else {
+        const result = await response.json();
+        message.success("تم الإرسال بنجاح");
+        setName(null);
+        setContact(null);
+        setEmail(null);
+        setService(null);
+        setMsg(null);
+        formRef.current.reset();
+        setLaoding(false);
+      }
+    } catch (err) {
+      setLaoding(false);
+      const result = await response.json();
+      message.error(result?.message);
+    }
+  };
   return (
     <>
       <Header />
@@ -36,8 +90,8 @@ function page() {
                 <div>
                   <span>الموقع</span>
                   <a href="#">
-                    ص.ب: 121، الرمز البريدي: 111،<br/> شمال الغبرة / بوشر / سلطنة
-                    عمان{" "}
+                    ص.ب: 121، الرمز البريدي: 111،
+                    <br /> شمال الغبرة / بوشر / سلطنة عمان{" "}
                   </a>
                 </div>
               </div>
@@ -74,7 +128,7 @@ function page() {
                 <p>
                   لن يتم نشر عنوان بريدك الإلكتروني. الحقول المطلوبة محددة *
                 </p>
-                <form>
+                <form ref={formRef} onSubmit={postData}>
                   <div class="form-group">
                     <label>الاسم *</label>
                     <input
@@ -82,6 +136,17 @@ function page() {
                       class="form-control"
                       required
                       placeholder="أدخل اسمك"
+                      onChange={(e) => setName(e.target.value)}
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label>رقم الاتصال</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      required
+                      placeholder="أدخل رقم الاتصال الخاص بك"
+                      onChange={(e) => setContact(e.target.value)}
                     />
                   </div>
                   <div class="form-group">
@@ -91,28 +156,48 @@ function page() {
                       class="form-control"
                       required
                       placeholder="بريدك الإلكتروني"
+                      onChange={(e) => setEmail(e.target.value)}
                     />
                   </div>
                   <div class="form-group">
-                    <label>الموضوع *</label>
-                    <input
-                      type="text"
+                    <label>اختر خدمة</label>
+                    <select
                       class="form-control"
-                      required
-                      placeholder="موضوع الرسالة"
-                    />
+                      value={service}
+                      onChange={(e) => setService(e.target.value)}
+                    >
+                      <option>تطوير تطبيقات البنوك</option>
+                      <option>خدمات FinOps</option>
+                      <option>خدمات التكامل</option>
+                      <option>تطوير المحفظة الرقمية</option>
+                      <option>طوير منصة التمويل الجماعي</option>
+                      <option>خدمة تعزيز الموارد</option>
+                      <option>تطوير برامج التأمين</option>
+                      <option>منصة التمويل اللامركزي (DeFi)</option>
+                      <option>تطوير منصة تبادل العملات</option>
+                      <option>الأمن السيبراني</option>
+                      <option>
+                        الاستعانة بمصادر خارجية لتكنولوجيا المعلومات
+                      </option>
+                      <option>إعادة هندسة الحلول</option>
+                      <option>تحوّل DevOps</option>
+                      <option>التجارة الإلكترونية</option>
+                    </select>
                   </div>
                   <div class="form-group">
-                    <label>تعليقات / أسئلة *</label>
+                    <label>تعليقات / أسئلة </label>
                     <textarea
-                      class="form-control"
                       rows="3"
-                      placeholder="اكتب تعليقك أو سؤالك هنا"
+                      class="form-control"
+                      onChange={(e) => setMsg(e.target.value)}
                     ></textarea>
                   </div>
                   <div class="form-group">
-                    <button>إرسال الرسالة</button>
+                  <button type="يُقدِّم" disabled={loading}>
+                  {loading ? "انتظر من فضلك..." : "يُقدِّم"}
+                </button>
                   </div>
+                  
                 </form>
               </div>
             </div>
