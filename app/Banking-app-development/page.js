@@ -49,7 +49,7 @@ function page() {
                             <button className={styles.LuSend2} onClick={() => {setContactModal(true)}}>
                                 {/* <Link href="#" > */}
                                     <span style={{ textDecoration: "none", color: "white" }}>
-                                        انضم الآن <FaArrowRight />
+                                    الحصول على الخدمات <FaArrowRight />
                                     </span>
                                 {/* </Link> */}
                             </button>
@@ -62,7 +62,6 @@ function page() {
                     </div>
                 </div>
             </section>
-
             <section className='mb-5 mt-5 d-lg-none d-block'>
                 <div className="container-fluid px-lg-5" style={{ direction: 'rtl' }}>
                     <div className="row align-items-center">
@@ -85,18 +84,17 @@ function page() {
                                     فريقنا من المصممين والمطورين والاستراتيجيين يقوم ببناء ميزات تعزز المستخدمين وتعزز النمو.
                                 </p>
                             </div>
-                            <button className={styles.LuSend2}>
-                                <Link href="/contact-us" passHref>
+                            <button className={styles.LuSend2} onClick={() => {setContactModal(true)}}>
+                                {/* <Link href="#" > */}
                                     <span style={{ textDecoration: "none", color: "white" }}>
-                                        انضم الآن <FaArrowRight />
+                                    الحصول على الخدمات <FaArrowRight />
                                     </span>
-                                </Link>
+                                {/* </Link> */}
                             </button>
                         </div>
                     </div>
                 </div>
             </section>
-
             <section className={styles.aboutFirst} style={{ direction: 'rtl' }}>
                 <div className="container-fluid px-lg-5">
                     <div className="row">
@@ -143,110 +141,6 @@ function page() {
                     </div>
                 </div>
             </section>
-
-            {/* <section className={styles.processSection} data-aos="fade-up" data-aos-duration="500" style={{ direction: 'rtl' }}>
-                <div className="container-fluid px-lg-5">
-                    <div className="row">
-                        <h4>عمليتنا للاختبار</h4>
-                        <span>قبل الإطلاق، نحتاج إلى خارطة طريق.</span>
-                        <div className={styles.flexBoxes}>
-                            <div className='col-lg-5 p-lg-0'>
-                                <div className={`${styles.processBox} ${styles.blueBg} ${styles.bankDevBlueUpperBox} `}>
-                                    <ul>
-                                        <h5>الغوص العميق</h5>
-                                        <p>سنقوم بتحليل أهدافك وجمهورك المستهدف واحتياجاتك التقنية لفهم رؤيتك تمامًا.</p>
-                                    </ul>
-                                    <ul>
-                                        <h5>التخطيط للمهمة</h5>
-                                        <p>بناءً على نتائجنا، سنقوم بوضع خطة مشروع واضحة وموجزة توضح:</p>
-                                        <li>ما الذي سنبنيه ونطاق المشروع</li>
-                                        <li>جدول زمني للإطلاق</li>
-                                        <li>ما ستحصل عليه في كل مرحلة من المراحل</li>
-                                        <p>يضمن ذلك أننا جميعًا على نفس الصفحة وأن تطبيقك سيُطلق بسلاسة.</p>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className='col-lg-5 p-lg-0'>
-                                <div className={`${styles.processBox} ${styles.blueBg} ${styles.bankDevWhiteUpperBox}`}>
-                                    <ul>
-                                        <h5>تصميم التطبيق الحلم، بكسل تلو الآخر.</h5>
-                                        <p>يتعاون فريقنا لإنشاء</p>
-                                    </ul>
-                                    <ul>
-                                        <h5>الإطارات السلكية</h5>
-                                        <p>فكر بها كالمخططات لتخطيط تطبيقك.</p>
-                                    </ul>
-                                    <ul>
-                                        <h5>النماذج الأولية</h5>
-                                        <p>نماذج تفاعلية تتيح لك تجربة التطبيق قبل بنائه.</p>
-                                    </ul>
-                                    <ul>
-                                        <h5>واجهة المستخدم (UI)</h5>
-                                        <p>الشاشات الجميلة والبديهية التي ستتفاعل معها.</p>
-                                    </ul>
-                                    <ul>
-                                        <h5>علامتك التجارية في المقدمة</h5>
-                                        <p>سوف نتأكد من أن التطبيق يعكس هويتك الفريدة.</p>
-                                    </ul>
-                                    <ul>
-                                        <h5>حلقة ملاحظات سريعة</h5>
-                                        <p>نستخدم الأساليب الرشيقة لجمع مدخلاتك باستمرار وتحسين التصميم أثناء التقدم.</p>
-                                    </ul>
-                                    <ul>
-                                        <h5>النتيجة؟ تطبيق ليس فقط وظيفيًا، بل ممتعًا للاستخدام.</h5>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div className={styles.flexBoxes}>
-                            <div className='col-lg-5 p-lg-0 mt-5'>
-                                <div className={`${styles.processBox} ${styles.blueBg} ${styles.bankDevWhiteBottomBox}`}>
-                                    <ul>
-                                        <h5>وضع تطبيقك المصرفي في الاختبار النهائي.</h5>
-                                        <p>نحن لا نترك أي شيء للصدفة. فريقنا يجري فحوصات شاملة:</p>
-                                    </ul>
-                                    <ul>
-                                        <h5>اختبار الأداء</h5>
-                                        <p>التأكد من أن التطبيق يعمل بسلاسة على جميع الأجهزة.</p>
-                                    </ul>
-                                    <ul>
-                                        <h5>اختبار الأمان</h5>
-                                        <p>بناء حصن حول بياناتك، للحفاظ عليها آمنة ومأمونة.</p>
-                                    </ul>
-                                    <ul>
-                                        <h5>عبر الأجهزة والمنصات، سيكون تطبيقك بلا عيوب.</h5>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className='col-lg-5 p-lg-0 mt-5'>
-                                <div className={`${styles.processBox} ${styles.blueBg} ${styles.bankDevBlueBottomBox}`}>
-                                    <ul>
-                                        <h5>يوم الإطلاق:</h5>
-                                        <h5>حان وقت الاحتفال!</h5>
-                                        <p>تم التحقق من كل شيء وتكراره. بعد الانتهاء من الاختبارات الصارمة، سنتولى:</p>
-                                    </ul>
-                                    <ul>
-                                        <h5>تقديم التطبيق في المتجر</h5>
-                                        <p>إيصال تطبيقك إلى الجمهور المستهدف.</p>
-                                    </ul>
-                                    <ul>
-                                        <h5>إعداد البنية التحتية الخلفية</h5>
-                                        <p>المحرك غير المرئي الذي يشغل تطبيقك.</p>
-                                    </ul>
-                                    <ul>
-                                        <h5>تهيئة الخوادم</h5>
-                                        <p>ضبط دقيق للحصول على أفضل أداء.</p>
-                                    </ul>
-                                    <ul>
-                                        <h5>نضمن إطلاقًا مثاليًا، لتستطيع تطبيقك التميز وجذب المستخدمين الجدد.</h5>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>  */}
-
             <section className={styles.processSection} data-aos="fade-up" data-aos-duration="500">
                 <div className="container-fluid px-lg-5">
                     <div className="row">
@@ -353,8 +247,6 @@ function page() {
                     </div>
                 </div>
             </section>
-
-
             <section className={styles.getStartedSection} data-aos="fade-up" data-aos-duration="500" style={{ direction: 'rtl' }}>
                 <div className="container-fluid px-lg-5">
                     <div className="row">
@@ -392,10 +284,8 @@ function page() {
                     </div>
                 </div>
             </section>
-
             <Testimonials />
             <Footer />
-            
             {contactModal ? <ContactModal  crossClick={setContactModal}/> : false}
         </>
     )

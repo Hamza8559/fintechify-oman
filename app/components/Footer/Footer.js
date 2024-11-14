@@ -1,11 +1,21 @@
+
+"use client"
+import React, { useRef, useState } from 'react'
 import styles from "../assets/css/Footer.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../assets/images/fintectfy_oman_logo-01.png";
 import { FaFacebookSquare, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter, FaArrowRight } from "react-icons/fa6";
+import { message } from "antd";
 
 export default function Footer() {
+  const formRef = useRef(null);
+  const postData = async (e) => {
+    e.preventDefault();
+    message.success("You have subscribed news letter");
+    formRef.current.reset();
+};
   return (
     <>
       <div className="container-fluid p-0">
@@ -23,16 +33,16 @@ export default function Footer() {
               </div>
             </div>
             <div className="col-lg-6">
-              <div className={styles.newsLatterBox}>
+              <form  ref={formRef} onSubmit={postData} className={styles.newsLatterBox}>
                 <input
-                  type="email"
+                  type="email" required
                   placeholder="عنوان البريد الإلكتروني"
                   className={styles.emailInput}
                 />
-                <button>
+                <button type="submit">
                   اشترك <FaArrowRight />
                 </button>
-              </div>
+              </form>
             </div>
           </div>
           <div className="row mt-5">
@@ -142,7 +152,7 @@ export default function Footer() {
                   <p>968-9749-7428+</p>
                   <p>info@fintechify.com.om</p>
                   <p>
-                  ص.ب: 121، الرمز البريدي: 111،<br/> شمال الغبرة / بوشر / سلطنة عمان
+                    ص.ب: 121، الرمز البريدي: 111،<br /> شمال الغبرة / بوشر / سلطنة عمان
                   </p>
                 </ul>
               </div>

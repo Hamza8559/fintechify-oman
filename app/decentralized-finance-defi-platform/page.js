@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+import React, { useState } from 'react'
 import Image from "next/image";
 import Header from "../components/Header/Header";
 import Banner from "../components/Banner/Banner";
@@ -9,8 +10,10 @@ import QoutesImg from "../components/assets/images/img-3-300x300.png";
 import img from "../components/assets/images/financeimg.jpg";
 import Link from 'next/link'
 import { FaArrowRight } from "react-icons/fa6";
+import ContactModal from '../components/modals/ContactModal';
 
 const page = () => {
+  const [contactModal, setContactModal] = useState(false)
   return (
     <>
       <Header />
@@ -70,13 +73,13 @@ const page = () => {
                   <br />في التنقل في عالم DeFi بثقة، بغض النظر عن مستوى خبرتك.
                 </p>
               </div>
-              <button className={styles.LuSend2}>
-                  <Link href="/contact-us" passHref>
-                    <span style={{ textDecoration: "none", color: "white" }}>
-                      انضم الآن <FaArrowRight />
-                    </span>
-                  </Link>
-                </button>
+              <button className={styles.LuSend2} onClick={() => { setContactModal(true) }}>
+                {/* <Link href="#" > */}
+                <span style={{ textDecoration: "none", color: "white" }}>
+                  الحصول على الخدمات <FaArrowRight />
+                </span>
+                {/* </Link> */}
+              </button>
             </div>
             <div className="col-lg-6 ">
               <div
@@ -92,7 +95,6 @@ const page = () => {
           </div>
         </div>
       </section>
-
       <section className="d-lg-none d-block mb-5 mt-5">
         <div className="container px-lg-5">
           <div className="row align-items-center">
@@ -152,18 +154,18 @@ const page = () => {
                   <br />في التنقل في عالم DeFi بثقة، بغض النظر عن مستوى خبرتك.
                 </p>
               </div>
-              <button className={styles.LuSend2}>
-                  <Link href="/contact-us" passHref>
-                    <span style={{ textDecoration: "none", color: "white" }}>
-                      انضم الآن <FaArrowRight />
-                    </span>
-                  </Link>
-                </button>
+              <button className={styles.LuSend2} onClick={() => { setContactModal(true) }}>
+                {/* <Link href="#" > */}
+                <span style={{ textDecoration: "none", color: "white" }}>
+                  الحصول على الخدمات <FaArrowRight />
+                </span>
+                {/* </Link> */}
+              </button>
             </div>
           </div>
         </div>
       </section>
-
+      {contactModal ? <ContactModal crossClick={setContactModal} /> : false}
       <section className={`${styles.processSection} mt-5`} data-aos="fade-up">
         <div className="container-fluid px-lg-5">
           <div className="row">
@@ -177,7 +179,7 @@ const page = () => {
                 >
                   <h5>سئمت من القلق بشأن الأمان والخيارات المحدودة؟</h5>
                   <p>
-                    منصة Fintechify للتمويل اللامركزي توفر مزيجًا قويًا من 
+                    منصة Fintechify للتمويل اللامركزي توفر مزيجًا قويًا من
                     <br /> الأمان المتطور ومجموعة متنوعة من الأدوات المالية،
                     <br /> المتاحة على مدار الساعة.
                   </p>
@@ -238,7 +240,6 @@ const page = () => {
           </div>
         </div>
       </section>
-
       <section className={styles.getStartedSection} data-aos="fade-up">
         <div className="container px-lg-5">
           <div className="row">
@@ -272,7 +273,7 @@ const page = () => {
               <h5 className="text-center">
                 لا تنتظر! اشترك اليوم للحصول على حساب Fintechify المجاني الخاص بك واكتشف عالمًا من الإمكانيات المالية.
               </h5>
-              <h3 style={{fontWeight:"600"}} className="text-center">عدد محدود من الأماكن! انضم إلى الثورة الآن!</h3>
+              <h3 style={{ fontWeight: "600" }} className="text-center">عدد محدود من الأماكن! انضم إلى الثورة الآن!</h3>
             </div>
           </div>
         </div>
