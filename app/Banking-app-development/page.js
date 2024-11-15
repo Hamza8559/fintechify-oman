@@ -78,7 +78,7 @@ function page() {
           </div>
         </div>
       </section>
-      {/*------------------------------------------ for Mobile--------------- */}
+      {/*------------------------------------------ for Mobile --------------- */}
       <section className="mb-5 mt-5 d-lg-none d-block">
         <div className="container-fluid px-lg-5" style={{ direction: "rtl" }}>
           <div className="row align-items-center">
@@ -112,12 +112,17 @@ function page() {
                   تعزز المستخدمين وتعزز النمو.
                 </p>
               </div>
-              <button className={styles.LuSend2}>
-                <Link href="/contact-us" passHref>
-                  <span style={{ textDecoration: "none", color: "white" }}>
-                    انضم الآن <FaArrowRight />
-                  </span>
-                </Link>
+              <button
+                className={styles.LuSend2}
+                onClick={() => {
+                  setContactModal(true);
+                }}
+              >
+                {/* <Link href="#" > */}
+                <span style={{ textDecoration: "none", color: "white" }}>
+                  انضم الآن <FaArrowRight />
+                </span>
+                {/* </Link> */}
               </button>
             </div>
           </div>
