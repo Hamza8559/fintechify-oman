@@ -1537,6 +1537,7 @@
    }
    .colright p{
     font-size: 16px;
+    letter-spacing: 1px;
    }
    .colright2 button{
     width: 50vw;
@@ -1547,6 +1548,8 @@
    }
    .colright2 p{
     font-size: 16px;
+    letter-spacing: 1px;
+
    }
 
   .btmRow2{
