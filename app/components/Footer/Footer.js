@@ -1,4 +1,3 @@
-
 "use client"
 import React, { useRef, useState } from 'react'
 import styles from "../assets/css/Footer.module.css";
@@ -15,7 +14,7 @@ export default function Footer() {
     e.preventDefault();
     message.success("لقد اشتركت في النشرة الإخبارية");
     formRef.current.reset();
-};
+  };
   return (
     <>
       <div className="container-fluid p-0">
@@ -33,7 +32,7 @@ export default function Footer() {
               </div>
             </div>
             <div className="col-lg-6">
-              <form  ref={formRef} onSubmit={postData} className={styles.newsLatterBox}>
+              <form ref={formRef} onSubmit={postData} className={styles.newsLatterBox}>
                 <input
                   type="email" required
                   placeholder="عنوان البريد الإلكتروني"
@@ -48,7 +47,9 @@ export default function Footer() {
           <div className="row mt-5">
             <div className="col-lg-3 col-md-4">
               <div className={styles.LogoBox}>
-                <Image src={logo} alt="شعار FinTechify" />
+                <Link href="/">
+                  <Image src={logo} alt="شعار FinTechify" />
+                </Link>
                 <div className={styles.socailMediaIconsBox}>
                   <Link href="#">
                     <FaFacebookSquare />
